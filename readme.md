@@ -43,6 +43,6 @@ Sample: `http://localhost:3000/primes/3?algorithm=atkin`
 * The scafolding of the application was done using express-generator* 
 * This version does not use treaths or webworkers, it is a blocking API, big numbers will stop the system
 * To high values the system fails due to memory problems
-* The start and restar of the app is done using nodemon, in a production environment parameters should use the ENV variables
+* The start and restart of the app is done using nodemon
 * The algorithms have been changed to address the requirements of this exercise but are not very efficient in the way they filter result sets
 * Tests are superficial and a production application would need much more edge scenarios that could never crash de server
