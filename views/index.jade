@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	h1 Welcome to the prime number calculator
+	p This application is an example of a blocking REST API for calculating all prime numbers up to a maxinum value
+
+	h2 API usage
+
+	p API endpoint: `/primes`
+
+	p Request:
+	pre curl #{host}/primes/2
+
+	p Response:
+	pre { initial: 2, total: 1, primes: [2], algorithm: 'sequential' }
+	
+	p Examples:
+	
+	a(href="/primes/3") #{host}/primes/3
+	br
+	a(href="/primes/5?algorithm=sequential") http://localhost:3000/primes/3?algorithm=sequential"
+	br
+	a(href="/primes/8?algorithm=atkin") http://localhost:3000/primes/3?algorithm=atkin"
+	br
+	a(href="/primes/100?algorithm=eratosthenes") http://localhost:3000/primes/3?algorithm=eratosthenes"
