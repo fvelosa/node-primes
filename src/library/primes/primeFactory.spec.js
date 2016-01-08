@@ -19,6 +19,6 @@ describe('Test the prime Factory', function () {
 	});
 	
 	it('should return undefined on wrong name', function () {
-		expect(primeFactory('error')).to.equal(undefined);
+		expect(primeFactory('error').name).to.equal('sequential');
 	});
 });

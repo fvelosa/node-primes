@@ -16,6 +16,11 @@ function commonPrimeTests(primeCalculator) {
 			expect(primeCalculator(1, 2).length).to.equal(1);
 			expect(primeCalculator(1, 2)[0]).to.equal(2);			
 		});
+        
+        it('Should return [2] on 2-2', function () {
+			expect(primeCalculator(2, 2).length).to.equal(1);
+			expect(primeCalculator(2, 2)[0]).to.equal(2);			
+		});
 
 		it('Should return [2,3] on 3', function () {
 			expect(primeCalculator(1, 3).length).to.equal(2);
@@ -27,6 +32,12 @@ function commonPrimeTests(primeCalculator) {
 			expect(primeCalculator(1, 4).length).to.equal(2);
 			expect(primeCalculator(1, 4)[0]).to.equal(2);
 			expect(primeCalculator(1, 4)[1]).to.equal(3);
+		});
+        
+        it('Should return [2,3] on 2-3', function () {
+			expect(primeCalculator(2, 3).length).to.equal(2);
+			expect(primeCalculator(2, 3)[0]).to.equal(2);
+			expect(primeCalculator(2, 3)[1]).to.equal(3);
 		});
 
 		it('Should return [2,3,5] on 5', function () {

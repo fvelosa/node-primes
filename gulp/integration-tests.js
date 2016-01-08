@@ -6,11 +6,9 @@ var mocha = require('gulp-mocha');
 gulp.task('integration-tests', function () {
 	return gulp.src('test/**/*.spec.js')
 		.pipe(mocha({
-				bail: false,
-				reporter: "nyan"
-			}).on('error', function () {})
-			//do nothing
-		);
+			bail: false,
+			reporter: "nyan"
+		}));
 });
 
 gulp.task('watch:integration-tests', function () {

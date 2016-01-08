@@ -4,7 +4,7 @@ var mocha = require('gulp-mocha');
 
 // Task
 gulp.task('unit-tests', function () {
-	return gulp.src('routes/**/*.spec.js')
+	return gulp.src('src/**/*.spec.js')
 		.pipe(mocha({
 				bail: false,
 				reporter: "nyan"
@@ -14,5 +14,5 @@ gulp.task('unit-tests', function () {
 });
 
 gulp.task('watch:unit-tests', function () {
-	gulp.watch(['app.js', 'routes/**/*.js'], ['unit-tests']);
+	gulp.watch(['app.js', 'routes/**/*.js', 'src/**/*.js'], ['unit-tests']);
 });

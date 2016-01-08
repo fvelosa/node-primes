@@ -2,17 +2,20 @@ extends layout
 
 block content
 	h1 Welcome to the prime number calculator
-	p This application is an example of a blocking REST API for calculating all prime numbers up to a maxinum value
+	p This application is an example of a REST API for calculating all prime numbers up to a maxinum value
 
 	h2 API usage
 
 	p API endpoint: `/primes`
 
+	h3 Example
+
 	p Request:
 	pre curl #{host}/primes/2
 
 	p Response:
-	pre { initial: 2, total: 1, primes: [2], algorithm: 'sequential' }
+	pre 202 if value is not in cache
+	pre 200 { initial: 2, total: 1, primes: [2]}
 	
 	p Examples:
 	
